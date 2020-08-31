@@ -1,4 +1,4 @@
-Object Practice
+/*Object Practice
     Gardening!
     You were hired to work as a landscaper for a large estate.
     See garden.jpg
@@ -41,19 +41,18 @@ function createPlant(type, isPerennial, leafDescription, leafColor, flowerColor,
     
     // Your Code Here!
     let plant = {
-        type: 'type',
-        isPerennial: 'isPerennial',
-        leafDescription: 'leafDescription',
-        leafColor: 'leafColor',
-        flowerColor: 'flowerColor',
-        flowerDescription: 'flowerDescription',
-        gallonsWaterPerWeek: 'gallonsWaterPerWeek',
-        amountOfSunNeeded: 'amountOfSunNeeded',
-    };
+        type, 
+        isPerennial,
+        leafDescription,
+        leafColor,
+        flowerColor,
+        flowerDescription,
+        gallonsWaterPerWeek,
+        amountOfSunNeeded,
+    }
     return plant;
 }
-    console.log(
-        createPlant:'type';'isPerennial'; 'leafDescription';  'leafColor'; 'flowerColor'; 'flowerDescription'; 'gallonsWaterPerWeek'; 'amountOfSunNeeded');
+    
 
 
 
@@ -84,6 +83,19 @@ function createEstate() {
     };
     return estate;
 }
+    function addPlantToEstate(estate,plant){
+
+    if (plant.type ==="rose"){
+
+        estate.roseArbor.push(plant);
+    }else if(plant.isPerennial && plant.amountOfSunNeeded<=5){
+        estate.perennialGarden.push(plant);
+    }else{
+        estate.slopePlanters.push(plant);
+
+    }
+}
+ 
 
 /**
  * addPlantToEstate
@@ -107,7 +119,7 @@ function addPlantToEstate(estate, plant) {
       rose.roseArbor.push(plant)
   }else{
       perennial.perennialGarden.push(plant)
-      }
+      
   }else{
       slopePlanters.push(plant)
   }
